@@ -1,0 +1,261 @@
+.idea-form {
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.idea-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* Form Row Styling */
+.form-row {
+  display: flex;
+  gap: 1rem; /* Space between fields */
+  flex-wrap: wrap; /* Allows fields to wrap to the next line if necessary */
+  margin-bottom: 15px;
+}
+
+label.inline-label {
+  display: inline-flex; /* Align label and input on the same line */
+  flex-direction: row; /* Arrange label and input side by side */
+  align-items: center; /* Vertically center label and input */
+  flex: 1 1 calc(25% - 1rem); /* Allow up to 4 items per row */
+  font-size: 14px;
+  gap: 1rem; /* Add equal spacing between label and input */
+}
+
+label.inline-label input,
+label.inline-label select {
+  width: 180px ; /* Keep input width adjustable */
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Submit Button */
+/* .submit {
+  display: inline ;
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(to right, #d99816, #2565b3);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+button{
+  display: inline ;
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(to right, #d99816, #2565b3);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* .searchinput, .deleteinput{
+  width: 50%;
+  height: 2.25rem;
+} */
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Gradient Line */
+.custom-line {
+  border: none;
+  height: 2.5px;
+  background: linear-gradient(to right, #d99816, #2565b3);
+  margin: 10px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column; /* Stack fields vertically */
+    gap: 1rem;
+  }
+
+  label.inline-label {
+    flex: 1 1 100%; /* Full width for smaller screens */
+  }
+
+  label.inline-label input,
+  label.inline-label select {
+    width: 250px; /* Full width input fields */
+  }
+}
+
+@media (max-width: 480px) {
+  .idea-form {
+    padding: 15px; /* Reduce padding on small screens */
+  }
+
+  .idea-form h2 {
+    font-size: 1.5rem; /* Adjust title size */
+  }
+
+  .form-section h3 {
+    font-size: 1rem; /* Adjust section title size */
+  }
+
+  button {
+    padding: 8px; /* Adjust button padding */
+    font-size: 0.9rem; /* Adjust button font size */
+  }
+}
+
+.inline-label {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-flex;
+  width: 40px;
+  height: 22px;
+}
+
+.toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 22px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.toggle-input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.toggle-input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+.inline-label {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* four equal columns */
+  gap: 75px; /* Space between fields */
+  padding-top: 20px;
+  margin-bottom: 5px;
+  align-items: center; /* Aligns items in the center vertically */
+}
+
+.inline-label {
+  display: flex;
+  justify-content: space-between; /* Ensures label is left, input is right */
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+}
+
+.inline-label input,
+.inline-label select {
+  width: 100% ; /* Adjust width for better alignment */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: left; /* Right-aligns text inside inputs */
+}
+
+.switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40px;
+}
+
+.file-upload {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 100px;
+}
+
+.file-input {
+  display: none; /* Hide default input */
+}
+
+.file-label {
+  background-color: #2196F3;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#fileName {
+  font-size: 14px;
+  color: #555;
+}
+
+.newdiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+select{
+  width: 125px;
+}

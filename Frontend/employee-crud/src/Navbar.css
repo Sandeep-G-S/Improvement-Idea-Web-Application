@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+ font-family: 'Poppins', sans-serif; /* Ensure Poppins is used across the app */
+}
+/* Reset margins and padding for the entire page */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins is used across the app */
+
+}
+
+/* Ensure the navbar sticks to the top */
+.navbar {
+    margin: 0;
+    padding: 1rem; /* Adjust padding for internal spacing */
+    position: relative; /* Ensure proper placement */
+}
+
+
+.navbar {
+    background: linear-gradient(to right, #d99816, #2565b3); /* Forest green */
+    color: white;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: space-between;
+    padding: 1rem; /* Adjust padding for height */
+    flex-wrap: nowrap; /* Prevent wrapping for desktop view */
+    gap: 1rem; /* Spacing between items */
+}
+
+.logo {
+    height: 40px; /* Fixed size for logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Make the search bar take available space */
+    justify-content: flex-start;
+    padding-left: 2%; /* Align search bar to the right */
+}
+
+.search input[type="text"] {
+    font-size: 14px;
+    padding: 0.5rem;
+    width: 100%; /* Search bar adjusts with screen size */
+    max-width: 250px; /* Limit the maximum width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.navitems {
+    list-style: none;
+    display: flex;
+    gap: 1rem; /* Spacing between nav items */
+    align-items: center;
+    margin: 0; /* Remove extra margin */
+}
+.navitems a {
+    color: #d99816; /* Set the text color of the nav items */
+    text-decoration: none; /* Remove underlines */
+    font-weight:500; /* Optional: Add some weight for better readability */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+
+}
+.navitems a:hover {
+    color: #ffffff; /* Optional: Change color on hover for better interaction */
+}
+
+.navitems li {
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    }
+
+    .search {
+        width: 100%; /* Full width search bar on smaller screens */
+        justify-content: center; /* Center search bar */
+        margin-top: 1rem;
+    }
+
+    .navitems {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+    }
+}
