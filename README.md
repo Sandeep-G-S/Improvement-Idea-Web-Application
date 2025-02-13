@@ -57,7 +57,7 @@ cd frontend
 npm install
 npm start
 ```
-The frontend will start at **http://localhost:3000** 🎨  
+The frontend will start at **http://localhost:5174** 🎨  
 
 ---
 
