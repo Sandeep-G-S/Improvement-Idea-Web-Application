@@ -62,7 +62,6 @@ The frontend will start at **http://localhost:5174** 🎨
 ---
 
 ## 📷 Screenshots  
-(Add screenshots once the UI is ready!)  
 
 | **Submit Idea** |
 |--------------|
